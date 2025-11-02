@@ -1,0 +1,50 @@
+{
+  "class_weights": {
+    "negative": 1.0,
+    "positive": 2.52
+  },
+  "augmentation": {
+    "train": {
+      "rotation": 180,
+      "flip_horizontal": true,
+      "flip_vertical": true,
+      "brightness_contrast": {
+        "brightness_limit": 0.2,
+        "contrast_limit": 0.2
+      },
+      "elastic_transform": {
+        "alpha": 50,
+        "sigma": 5
+      },
+      "random_scale": {
+        "scale_limit": 0.1
+      }
+    },
+    "val_test": {
+      "normalize_only": true
+    }
+  },
+  "sampling": {
+    "strategy": "balanced",
+    "samples_per_class": 16
+  },
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "resize": {
+    "target_size": [
+      256,
+      256
+    ],
+    "interpolation": "bicubic"
+  }
+}

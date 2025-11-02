@@ -1,0 +1,29 @@
+# IDC Segmentation Project Configuration
+
+## Dataset
+dataset:
+  name: "IDC_Breast_Histopathology"
+  root_path: "data/IDC_regular_ps50_idx5"
+  image_size: [50, 50]
+  num_classes: 2
+  
+## Training
+training:
+  batch_size: 32
+  epochs: 50
+  learning_rate: 0.001
+  device: "cuda"
+  
+## SAM Configuration
+sam:
+  model_type: "vit_b"  # vit_b, vit_l, vit_h
+  checkpoint: "sam_checkpoints/sam_vit_b_01ec64.pth"
+  
+## U-Net Configuration  
+unet:
+  depth: 4
+  start_filters: 64
+  
+## Evaluation
+evaluation:
+  metrics: ["iou", "dice", "precision", "recall"]

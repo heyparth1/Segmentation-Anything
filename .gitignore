@@ -1,0 +1,33 @@
+# Ignore models and data directories
+models/
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual Environment
+venv/
+env/
+.env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+logs/
+*.log
+
+# VS Code
+.vscode/
+
+# Checkpoints
+*.pth
+*.ckpt
+sam_checkpoints/
